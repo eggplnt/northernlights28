@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+</head>
+<body>
+  {% block extrahead %}
+  <link href="{% static 'test.css' %}" rel="stylesheet">
+  {% endblock %}
+
+  <div class='a1'>
+    <h1>テストページ</h1>
+  </div>
+
+  <div class='b1'>
+      <p><b>干支：</b><br>
+      {% for p in eto %}
+      {{ p }}
+      {% endfor %}
+    </p>
+  </div>
+
+  <div class='d1'>
+    <p>
+      <b>果物：</b><br>
+      {% for p in fruits %}
+      {{ p }}とか<br>
+      {% endfor %}
+    </p>
+  </div>
+
+</body>
+</html>
